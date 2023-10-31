@@ -1,0 +1,86 @@
+import { HiOutlineAcademicCap } from "react-icons/hi";
+import {
+  AmortismanTablosu,
+  GOS2,
+  KI1,
+  KI2,
+  NakitAkim,
+  NetBugunkuDeger,
+  NetGelecektekiDeger,
+  TaksitOdemeTablosu,
+  VeriGiriş,
+  YENH,
+} from "../../pages";
+
+export const DASHBOARD_SIDEBAR_LINKS = [
+  {
+    key: "veri-girisi",
+    label: "Veri Girişi",
+    path: "/",
+    icon: <HiOutlineAcademicCap />,
+    component: <VeriGiriş />,
+  },
+  {
+    key: "taksit-odeme-tablosu",
+    label: "Taksit Ödeme Tablosu",
+    path: "/taksit-odeme-tablosu",
+    icon: <HiOutlineAcademicCap />,
+    component: <TaksitOdemeTablosu />,
+  },
+  {
+    key: "amortisman-tablosu",
+    label: "Amortisman Tablosu",
+    path: "/amortisman-tablosu",
+    icon: <HiOutlineAcademicCap />,
+    component: <AmortismanTablosu />,
+  },
+  {
+    key: "nakit-akim",
+    label: "Nakit Akım",
+    path: "/nakit-akim",
+    icon: <HiOutlineAcademicCap />,
+    component: <NakitAkim />,
+  },
+  {
+    key: "net-bugunku-deger",
+    label: "Net Bugünkü Değer",
+    path: "/net-bugunku-deger",
+    icon: <HiOutlineAcademicCap />,
+    component: <NetBugunkuDeger />,
+  },
+  {
+    key: "net-gelecekteki-deger",
+    label: "Net Gelecekteki Değer",
+    path: "/net-gelecekteki-deger",
+    icon: <HiOutlineAcademicCap />,
+    component: <NetGelecektekiDeger />,
+  },
+  {
+    key: "yenh",
+    label: "YENH",
+    path: "/yenh",
+    icon: <HiOutlineAcademicCap />,
+    component: <YENH />,
+  },
+  {
+    key: "ki1",
+    label: "KI1",
+    path: "/ki1",
+    icon: <HiOutlineAcademicCap />,
+    component: <KI1 />,
+  },
+  {
+    key: "ki2",
+    label: "KI2",
+    path: "/ki2",
+    icon: <HiOutlineAcademicCap />,
+    component: <KI2 />,
+  },
+  {
+    key: "gos2",
+    label: "GÖS2",
+    path: "/gos2",
+    icon: <HiOutlineAcademicCap />,
+    component: <GOS2 />,
+  },
+];
