@@ -55,12 +55,12 @@ export default function ExcelTable({ table_sheet, title, setChartData }) {
                       )}
                       key={idx}
                     >
-                      {dt[0] != 3000 &&
-                      dt[0] != 2000 &&
-                      dt[0] != 1000 &&
-                      dt[0] != 5000
-                        ? row?.toLocaleString()
-                        : row}
+                      {isNaN(parseFloat(row))
+                        ? row
+                        : new Intl.NumberFormat("tr-TR", {
+                            style: "decimal",
+                            maximumFractionDigits: 2,
+                          }).format(row)}
                     </td>
                   ))}
                 </tr>
