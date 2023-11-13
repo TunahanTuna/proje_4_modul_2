@@ -17,14 +17,10 @@ export default function Layout() {
   const corpId = cookies.get("corp");
   const [jwtKey, setJwtKey] = useState(null);
 
-  apiRequests(jwtKey);
+  apiRequests(key);
   return (
     <div className="flex flex-row bg-neutral-50 h-screen w-screen overflow-hidden">
-      {veriGirisi?.length == 0 ? (
-        <div>
-          <LoginPage setJwtKey={setJwtKey} />
-        </div>
-      ) : (
+      {
         <div className="flex flex-row bg-neutral-100 h-screen w-screen ">
           <Sidebar />
           <div className="flex-1 bg-neutral-100 overflow-y-scroll">
@@ -32,7 +28,7 @@ export default function Layout() {
             <div className="p-4 ">{<Outlet />}</div>
           </div>
         </div>
-      )}
+      }
     </div>
   );
 }

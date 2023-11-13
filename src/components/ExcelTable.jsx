@@ -55,12 +55,14 @@ export default function ExcelTable({ table_sheet, title, setChartData }) {
                       )}
                       key={idx}
                     >
-                      {isNaN(parseFloat(row))
-                        ? row
-                        : new Intl.NumberFormat("tr-TR", {
-                            style: "decimal",
-                            maximumFractionDigits: 2,
-                          }).format(row)}
+                      {row
+                        ? isNaN(parseFloat(row))
+                          ? row
+                          : new Intl.NumberFormat("tr-TR", {
+                              style: "decimal",
+                              maximumFractionDigits: 2,
+                            }).format(row)
+                        : "-"}
                     </td>
                   ))}
                 </tr>
